@@ -1,0 +1,54 @@
+{
+  "name": "ben-gibson/bryn-yahoo-calculator",
+  "description": "An exchange rate calculator that pulls data from Yahoo's YQL Finance API.",
+  "keywords": [
+    "currency",
+    "conversion",
+    "exchange",
+    "rate",
+    "European Central Bank",
+    "calculator"
+  ],
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "homepage": "https://github.com/ben-gibson/bryn-yahoo-calculator",
+  "authors": [
+    {
+      "name": "Ben Gibson",
+      "email": "ben.gibson.2011@gmail.com",
+      "homepage": "https://ben-gibson.co.uk"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/ben-gibson/bryn"
+    }
+  ],
+  "require": {
+    "php": "~7.0",
+    "ben-gibson/bryn": "dev-master",
+    "php-http/client-implementation": "^1.0",
+    "php-http/discovery": "^1.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit" : "~6.0",
+    "squizlabs/php_codesniffer": "~2.3",
+    "php-http/mock-client": "^1.0",
+    "php-http/guzzle6-adapter": "^1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Gibbo\\Bryn\\Calculator\\Yahoo\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Gibbo\\Bryn\\Calculator\\Yahoo\\Test\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "format": "phpcbf --standard=psr2 src/"
+  }
+}
