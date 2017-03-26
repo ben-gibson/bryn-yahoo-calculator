@@ -28,8 +28,10 @@
   "require": {
     "php": "~7.0",
     "ben-gibson/bryn": "dev-master",
+    "php-http/httplug": "^1.1",
     "php-http/client-implementation": "^1.0",
-    "php-http/discovery": "^1.2"
+    "php-http/discovery": "^1.2",
+    "php-http/client-common": "^1.4"
   },
   "require-dev": {
     "phpunit/phpunit" : "~6.0",
