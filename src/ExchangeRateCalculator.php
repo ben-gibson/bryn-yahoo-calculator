@@ -33,7 +33,9 @@ class ExchangeRateCalculator implements \Gibbo\Bryn\ExchangeRateCalculator
     }
 
     /**
-     * A convenience method for initialising the default implementation,
+     * A convenience method for initialising the default implementation.
+     *
+     * @return static
      */
     public static function default()
     {
@@ -67,6 +69,10 @@ class ExchangeRateCalculator implements \Gibbo\Bryn\ExchangeRateCalculator
                 "Invalid JSON response received from Yahoo's YQL Finance API",
                 $response->getStatusCode()
             ));
+        }
+
+        if (strtoupper($rates->query->results->rate->Rate) === 'N/A') {
+            throw ExchangeRateCalculatorException::unsupportedCurrency($exchange->getBase(), $this);
         }
 
         return new ExchangeRate($exchange, (float)$rates->query->results->rate->Rate);
