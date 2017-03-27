@@ -22,7 +22,7 @@ $ composer require ben-gibson/bryn-yahoo-calculator
     
 require 'vendor/autoload.php';
     
-$calculator = \Gibbo\Bryn\Calculator\Yahoo\ExchangeRateCalculator::default();
+$calculator = \Gibbo\Bryn\Calculator\Yahoo\YahooCalculator::default();
     
 $exchangeRate = $calculator->getRate(
     new \Gibbo\Bryn\Exchange(

@@ -4,15 +4,16 @@ namespace Gibbo\Bryn\Calculator\Yahoo;
 
 use Gibbo\Bryn\Exchange;
 use Gibbo\Bryn\ExchangeRate;
+use Gibbo\Bryn\ExchangeRateCalculator;
 use Gibbo\Bryn\ExchangeRateCalculatorException;
 use Http\Client\Common\HttpMethodsClient;
 use Http\Discovery\HttpClientDiscovery;
 use Http\Discovery\MessageFactoryDiscovery;
 
 /**
- * Calculates an exchange rate using data from Yahoo.
+ * Calculates an exchange rate from Yahoo's YQL Finance API.
  */
-class ExchangeRateCalculator implements \Gibbo\Bryn\ExchangeRateCalculator
+class YahooCalculator implements ExchangeRateCalculator
 {
 
     const URL = 'https://query.yahooapis.com/v1/public/yql?q=%s&env=store://datatables.org/alltableswithkeys&format=json';

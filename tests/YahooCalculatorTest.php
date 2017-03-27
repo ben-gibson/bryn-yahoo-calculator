@@ -2,7 +2,7 @@
 
 namespace Gibbo\Bryn\Calculator\Yahoo\Test;
 
-use Gibbo\Bryn\Calculator\Yahoo\ExchangeRateCalculator;
+use Gibbo\Bryn\Calculator\Yahoo\YahooCalculator;
 use Gibbo\Bryn\Currency;
 use Gibbo\Bryn\Exchange;
 use Gibbo\Bryn\ExchangeRate;
@@ -16,17 +16,17 @@ use Psr\Http\Message\StreamInterface;
 /**
  * Calculator tests.
  */
-class ExchangeRateCalculatorTest extends TestCase
+class YahooCalculatorTest extends TestCase
 {
 
     /**
-     * Can the calcualtor be initialised.
+     * Can the calculator be initialised.
      *
      * @return void
      */
     public function testCanBeInitialised()
     {
-        $this->assertInstanceOf(ExchangeRateCalculator::class, $this->getCalculator());
+        $this->assertInstanceOf(YahooCalculator::class, $this->getCalculator());
     }
 
     /**
@@ -97,7 +97,7 @@ JSON;
      * Test an exception is thrown when an unsupported currency is given.
      *
      * @expectedException \Gibbo\Bryn\ExchangeRateCalculatorException
-     * @expectedExceptionMessage The currency 'GGG' is not supported by the calculator (Gibbo\Bryn\Calculator\Yahoo\ExchangeRateCalculator)
+     * @expectedExceptionMessage The currency 'GGG' is not supported by the calculator (Gibbo\Bryn\Calculator\Yahoo\YahooCalculator)
      *
      * @return void
      */
@@ -174,11 +174,11 @@ JSON;
      *
      * @param Client|null $httpClient
      *
-     * @return ExchangeRateCalculator
+     * @return YahooCalculator
      */
-    private function getCalculator(Client $httpClient = null): ExchangeRateCalculator
+    private function getCalculator(Client $httpClient = null): YahooCalculator
     {
-        return new ExchangeRateCalculator(
+        return new YahooCalculator(
             new HttpMethodsClient($httpClient ?: new Client(), MessageFactoryDiscovery::find())
         );
     }
