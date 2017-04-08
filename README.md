@@ -1,7 +1,9 @@
 # Bryn - Yahoo Calculator
 
+[![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status](https://travis-ci.org/ben-gibson/bryn-yahoo-calculator.svg?branch=master)](https://travis-ci.org/ben-gibson/bryn-yahoo-calculator)
+[![Total Downloads][ico-downloads]][link-downloads]
 
 An exchange rate calculator for [Bryn](https://github.com/ben-gibson/bryn) that pulls data from Yahoo's YQL Finance API. [HTTPlug](http://httplug.io/) 
 is used to support multiple `HTTP` clients including `Guzzle`, `Buzz`, and `Curl`.
@@ -71,6 +73,10 @@ If you discover any security related issues, please email ben.gibson.2011@gmail.
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
+[ico-version]: https://img.shields.io/packagist/v/ben-gibson/bryn-yahoo-calculator.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/ben-gibson/bryn-yahoo-calculator.svg?style=flat-square
+[link-packagist]: https://packagist.org/packages/ben-gibson/bryn-yahoo-calculator
+[link-downloads]: https://packagist.org/packages/ben-gibson/bryn-yahoo-calculator
 [ico-license]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
 [link-author]: https://github.com/ben-gibson
 [link-contributors]: ../../contributors
