@@ -19,15 +19,9 @@
       "homepage": "https://ben-gibson.co.uk"
     }
   ],
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/ben-gibson/bryn"
-    }
-  ],
   "require": {
     "php": "~7.0",
-    "ben-gibson/bryn": "dev-master",
+    "ben-gibson/bryn": "~0.0.1",
     "php-http/httplug": "^1.1",
     "php-http/client-implementation": "^1.0",
     "php-http/discovery": "^1.2",
